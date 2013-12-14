@@ -83,7 +83,7 @@ abstract class Bootstrap {
                 throw new \Exception("Rota incorreta, verifique o endereço da url");
         endif;
         } catch (\Exception $e){
-                require_once '../App/Principal/views/error/404.phtml';
+                require_once '../App/Application/views/error/404.phtml';
         }
     }
 	
