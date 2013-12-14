@@ -163,6 +163,12 @@ abstract class AbstractActionController implements Controller {
 
     }
 
+    public function getFromRoutePosition($position){
+        $url = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
+        $info = explode("/", $url);
+        return $info[$position];
+    }
+    
     public function redirect($url) {
             header("Location:$url");
     }
