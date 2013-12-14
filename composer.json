@@ -1,0 +1,21 @@
+{
+    "name": "brenodouglas/mvc",
+    "description": "Mvc Basico PHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Breno Douglas",
+            "email": "breno_douglas@hotmail.com"
+        }
+    ],
+    "autoload" : {
+        "psr-0" : {
+            "Base"  : "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
