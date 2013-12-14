@@ -25,18 +25,18 @@ class Doctrine {
         
     }
     
-    public function getConn(){
+    private function getConn(){
         
         $conn = Module::dbConfig();
         
         return $conn;
     }
     
-    public function getConfig(){
+    private function getConfig(){
         $modules = Module::getModules();
         $array = array();
         foreach($modules as $key=>$value){
-            $array[] = __DIR__."/../../../App/".$value."/Entity";
+            $array[] = "../App/".$value."/Entity";
         }
         $isDevMode = true;
         $config = Setup::createAnnotationMetadataConfiguration($array, $isDevMode);
