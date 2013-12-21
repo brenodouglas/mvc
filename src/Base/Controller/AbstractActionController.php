@@ -224,6 +224,12 @@ abstract class AbstractActionController implements Controller {
         $this->getSession();
         $this->addSession($name,$message);
     }
+
+
+    public function getServiceLocator(){
+        
+    }
+
     public function getFlashMessage($name){
         $this->getSession();
         if(isset($_SESSION[$name])){

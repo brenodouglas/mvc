@@ -29,5 +29,6 @@ interface Controller {
     public function addFlashMessage($name,$message);
     public function getFlashMessage($name);
     public function getDoctrine();
+    public function getServiceLocator();
 }   
 
