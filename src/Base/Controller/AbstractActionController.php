@@ -227,7 +227,7 @@ abstract class AbstractActionController implements Controller {
 
 
     public function getServiceLocator(){
-        
+        return new \Base\Di\Service($this);
     }
 
     public function getFlashMessage($name){
