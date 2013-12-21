@@ -13,7 +13,12 @@ class Service {
 
 	public function get($name){
 		$service = \App\Module::getService();
-		return $service[$name]($this->controller);
+		$e = $service[$name]($this->controller);
+
+		if(! isset($e)){
+			throw new \Exception("Service não encontrado em App\Module.php [getService()]");
+		}
+		return $e;
 	}
 
 }
