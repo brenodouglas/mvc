@@ -11,14 +11,15 @@
     
     "require": {
         "composer/composer": "1.0.*@dev",
-        "php" : ">=5.3"
-        
-    },
-    "require-dev": {
+        "php" : ">=5.3",
         "doctrine/common": "2.4.*",
         "doctrine/dbal": "2.4.1",
         "doctrine/orm": "2.4.1",
         "symfony/yaml": "2.*"
+        
+    },
+    "require-dev": {
+        
     },
     "autoload" : {
         "psr-0" : {
