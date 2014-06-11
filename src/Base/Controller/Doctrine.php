@@ -10,12 +10,13 @@ class Doctrine {
     private static $entityManager;
     
     public function getEntityManager() {
-        $conn = $this->getConn();
-        $config = $this->getConfig();
+       
         try {
             if(isset(self::$entityManager)){
                 return self::$entityManager;          
             } else {
+                $conn = $this->getConn();
+                $config = $this->getConfig();
                 self::$entityManager = EntityManager::create($conn, $config);
             }
         } catch(\Exception $e){
@@ -28,7 +29,6 @@ class Doctrine {
     private function getConn(){
         
         $conn = Module::dbConfig();
-        
         return $conn;
     }
     
@@ -40,7 +40,6 @@ class Doctrine {
         }
         $isDevMode = true;
         $config = Setup::createAnnotationMetadataConfiguration($array, $isDevMode);
-        
         return $config;
     }
 }

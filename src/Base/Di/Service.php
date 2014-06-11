@@ -13,6 +13,10 @@ class Service {
 
 	public function get($name){
 		$service = \App\Module::getService();
+		if (! array_key_exists($name, $service)) {
+			throw new \Exception("Key invalid - Service não encontrado em App\Module.php [getService()]");
+		}
+
 		$e = $service[$name]($this->controller);
 
 		if(! isset($e)){
